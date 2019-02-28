@@ -28,6 +28,6 @@ best <- function (state, outcome){
     evaluate_data[, 2] <- as.numeric(evaluate_data[,2])
     
     ## Return hospital name in that state with lowest 30-day death rate
-    print( evaluate_data[ order(evaluate_data[,2]), 1 ][1] )
+    print( evaluate_data[ order(evaluate_data[,2], evaluate_data[,1]), 1 ][1] )
 }
 
